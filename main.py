@@ -1,4 +1,4 @@
-
+# John Paul Schneuker Diaz
 # Encodes password, shifting up each digit in the password by 3 numbers
 def encoder(password):
     encoded_password = ""
