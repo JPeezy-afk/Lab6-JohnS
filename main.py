@@ -8,6 +8,16 @@ def encoder(password):
         encoded_password += str(digit % 10)
     return encoded_password
 
+
+# function to decode an encoded password
+def decoder(encoded_password):
+    password = ""
+    key = "7890123456"
+    for i in encoded_password:
+        i = int(i)
+        password += key[i]
+    return password
+
 # Main function
 def main():
     while True:
@@ -25,7 +35,7 @@ def main():
             print("Your password has been encoded and stored!")
         # If option == 2, decode encoded passwords
         elif option == 2:
-            pass
+            print(f"The encoded password is {encoded_password} and the decoded password is {decoder(encoded_password)}")
         # Else, exit loop
         else:
             break
